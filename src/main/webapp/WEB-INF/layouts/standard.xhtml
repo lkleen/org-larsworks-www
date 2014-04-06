@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+        >
+<f:view contentType="text/html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="A layout example that shows off a responsive product landing page."/>
+        <title>org.larsworks.bitcoin.app</title>
+        <link rel="stylesheet" href="${request.contextPath}/webapp/resources/styles/structure.css" type="text/css"
+              media="screen, projection"/>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css"/>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+        <ui:insert name="headIncludes"/>
+    </h:head>
+    <h:body>
+        <div class="content-wrapper">
+            <div class="content">
+                <ui:insert name="content"/>
+            </div>
+        </div>
+
+
+    </h:body>
+</f:view>
+</html>
