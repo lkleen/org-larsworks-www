@@ -15,6 +15,15 @@
     </resource-ref>
 
     <!--
+        Primefaces theme
+    -->
+
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>bootstrap</param-value>
+    </context-param>
+
+    <!--
         SPRING ROOT WEB APPLICATION CONTEXT
     -->
 
