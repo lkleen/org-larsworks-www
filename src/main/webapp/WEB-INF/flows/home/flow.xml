@@ -4,6 +4,8 @@
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
     <var name="contact" class="org.larsworks.www.beans.Contact"/>
+    <var name="menu" class="org.larsworks.www.beans.Menu"/>
+
 
     <view-state id="view">
 

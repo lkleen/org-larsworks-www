@@ -11,31 +11,50 @@
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:p="http://primefaces.org/ui"
                 xmlns:h="http://java.sun.com/jsf/html"
-                xmlns:f="http://java.sun.com/jsf/core"
 
                 template="/WEB-INF/layouts/standard.xhtml">
 
     <ui:define name="content">
-            <p:layout style="min-width:400px;min-height:200px;" id="layout" fullPage="true">
-                <p:layoutUnit id="header" position="north" resizable="true" size="120" minSize="40" maxSize="200">
-                    <h1 class="title ui-widget-header ui-corner-all">Welcome to PrimeFaces ShowCase</h1>
-                </p:layoutUnit>
-                <p:layoutUnit id="left" position="west" resizable="true" size="100" minSize="40" maxSize="200">
-                    West
-                </p:layoutUnit>
-                <p:layoutUnit id="center-pane" position="center">
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                    sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
-                </p:layoutUnit>
-                <p:layoutUnit id="footer" position="south" size="50">
-                    South
-                </p:layoutUnit>
-            </p:layout>
+        <p:layout style="min-width:400px;min-height:200px;" id="layout" fullPage="true">
+            <p:layoutUnit id="header" position="north" resizable="true" size="120" minSize="40" maxSize="200">
+                <h1 class="title ui-widget-header ui-corner-all">larsworks.org</h1>
+            </p:layoutUnit>
+            <p:layoutUnit id="left" position="west" resizable="true" size="250" minSize="40" maxSize="200">
+
+                <h:form>
+                    <p:growl id="messages"/>
+                    <p:menu>
+                        <p:submenu label="Ajax Menuitems">
+                            <p:menuitem value="Save" actionListener="#{menu.save}" update="messages"
+                                        icon="ui-icon-disk"/>
+                            <p:menuitem value="Update" actionListener="#{menu.update}" update="messages"
+                                        icon="ui-icon-arrowrefresh-1-w"/>
+                        </p:submenu>
+                        <p:submenu label="Non-Ajax Menuitem">
+                            <p:menuitem value="Delete" actionListener="#{menu.delete}" update="messages" ajax="false"
+                                        icon="ui-icon-close"/>
+                        </p:submenu>
+                        <p:submenu label="Navigations">
+                            <p:menuitem value="External" url="http://www.larsworks.org" icon="ui-icon-home"/>
+                            <p:menuitem value="Internal" outcome="/noimplemented" icon="ui-icon-star"/>
+                        </p:submenu>
+                    </p:menu>
+                </h:form>
+
+            </p:layoutUnit>
+            <p:layoutUnit id="center-pane" position="center">
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+                sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>sabbel bla<br/>
+            </p:layoutUnit>
+            <p:layoutUnit id="footer" position="south" size="120">
+                <h1 class="ui-widget-header ui-corner-all">larsworks.org</h1>
+            </p:layoutUnit>
+        </p:layout>
     </ui:define>
 
 </ui:composition>
